@@ -1,0 +1,133 @@
+.modal.-add-testimonial#modal-add-testimonial
+    ._body
+        ._close.js-close-modal
+            +icon('cross')
+        ._content
+            ._title.h2.h2--white Оставить отзыв
+            form
+                ._inner
+                    ._left
+                        ._rating-wrapper
+                            ._rating-left
+                                ._rating-subtitle Общая оценка
+                                .rating-stars.-lg.js-stars.js-input-stars(data-rating="5")
+                                    ._star
+                                        +icon('empty-star')
+                                    ._star
+                                        +icon('empty-star')
+                                    ._star
+                                        +icon('empty-star')
+                                    ._star
+                                        +icon('empty-star')
+                                    ._star
+                                        +icon('empty-star')
+                            ._rating-right
+                                ._rating-subtitle Поставьте оценку
+                                ._rating-box
+                                    .rating-stars.js-stars.js-input-stars(data-rating="5")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating-text Удобство подбора товаров в нашем интернет-магазине
+                                ._rating-box
+                                    .rating-stars.js-stars.js-input-stars(data-rating="5")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating-text Скорость обработки заказа
+                                ._rating-box
+                                    .rating-stars.js-stars.js-input-stars(data-rating="5")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating-text Общение с менеджером
+                                ._rating-box
+                                    .rating-stars.js-stars.js-input-stars(data-rating="5")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating-text Скорость и качество доставки
+                                ._rating-box
+                                    .rating-stars.js-stars.js-input-stars(data-rating="5")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating-text Качество товаров
+                        ._fields
+                            ._form-group-wrapper
+                                +form-group('text', 'tes1', '', true, 'input', '', 'Ваше имя*')
+                                +form-group('email', 'tes2', '', false, 'input', '', 'Ваш e-mail')
+                                +form-group('text', 'tes3', '', false, 'input', '', 'Ваш город')
+                            +form-group-textarea('tes4', '', true, '', 'textarea', '', 'Ваш отзыв*')
+                        ._fields-box
+                            +form-group-checkbox-allow('cb1', 'Согласие на обработку <a href="#">персональных данных</a>', false, true, 'checkbox-allow', 'label-allow')
+                            button(type="submit").common-btn-redesign.-yellow.-with-icon отправить
+                                +icon('arrows-multiple')
+                    ._right
+                        ._tags-wrapper
+                            ._subtitle Как впечатления?
+                            .tags
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb1")
+                                    label(for="tes-cb1")._tag Высокое качество &#11088;
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb2")
+                                    label(for="tes-cb2")._tag Крутой дизайн
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb3")
+                                    label(for="tes-cb3")._tag Общение с менеджером &#128077;
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb4")
+                                    label(for="tes-cb4")._tag Удобно для дома &#128715;
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb5")
+                                    label(for="tes-cb5")._tag Топовые тренировки &#129354;
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb6")
+                                    label(for="tes-cb6")._tag Filippov Dynasty &#10084;&#65039;
+                                ._tag-wrapper
+                                    input(type="checkbox" id="tes-cb7")
+                                    label(for="tes-cb7")._tag Почти быстрая доставка &#128666;
+                        label.file-upload
+                            input(type="file").js-file-upload
+                            +icon('photo')
+                            ._upload-text Прикрепить фото / видео / аудио
+                            +icon('file')
+                        ._upload-disclaimer
+                            +icon('heart')
+                            ._upload-disclaimer-text Отзывы с фотографиями и видео делают нас оооооочень счастливыми! Отправляем вам лучи благодарности

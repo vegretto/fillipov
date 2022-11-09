@@ -1,0 +1,73 @@
+//fancybox-fix: Позволяет импортировать jquery.fancybox.min.css напрямую в scss без ошибок при сборке.
+@import "helpers/fancybox-fix";
+
+//libs
+@import "libs/normalize";
+@import "libs/swiper-vars";
+@import "libs/swiper";
+@import "libs/jquery.fancybox.min";
+@import "libs/easy-autocomplete.min";
+//@import "libs/datepicker.min";
+
+//helpers
+@import "helpers/mixins";
+
+// base
+@import "base/variables";
+@import "base/fonts";
+@import "base/general";
+@import "base/common";
+
+// components
+@import "components/header";
+@import "components/footer";
+@import "components/forms";
+@import "components/top-promo";
+@import "components/main-slogan";
+@import "components/main-banner";
+@import "components/a-banners";
+@import "components/product-slider-redesign";
+@import "components/product-preview";
+@import "components/rating-stars";
+@import "components/d-banners";
+@import "components/series";
+@import "components/series-new";
+@import "components/c-banners";
+@import "components/our-works";
+@import "components/works-modal";
+@import "components/showrooms";
+@import "components/shipment-destinations";
+@import "components/subscribe-blocks";
+@import "components/breadcrumbs";
+@import "components/catalog-tags";
+@import "components/category-sidebar";
+@import "components/product-filters";
+@import "components/pagination";
+@import "components/testimonials";
+@import "components/tags";
+@import "components/callback";
+@import "components/typography";
+@import "components/shop-rating";
+@import "components/showrooms-rating";
+@import "components/modals";
+@import "components/city-choose";
+@import "components/product-card-main";
+@import "components/series-video";
+@import "components/terms";
+@import "components/section-links";
+@import "components/product-description";
+@import "components/accordion-section";
+@import "components/related-series";
+@import "components/personal-discount";
+@import "components/mobile-menu";
+@import "components/catalog-menu";
+@import "components/catalog-sidebar";
+@import "components/catalog-preview";
+@import "components/catalog-presentation";
+@import "components/fw-banner";
+
+// pages
+@import "pages/index";
+@import "pages/category";
+@import "pages/testimonials";
+@import "pages/catalog";

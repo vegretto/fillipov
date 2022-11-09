@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title Filippov NEW
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0")
+        link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+        link(rel="stylesheet" href="styles/style.min.css")
+    body
+        block header
+        block content
+        block footer
+            include components/footer
+        block modals
+            include components/modals/geo-modal
+            include components/modals/credit-modal
+            include components/modals/for-coaches-modal
+            include components/modals/quick-order-modal
+            include components/modals/quick-view-modal
+            include components/modals/add-testimonial-modal
+            include components/modals/common-modal
+            include components/modals/ask-modal
+            include components/modals/common-modal-black
+
+    block scripts
+            script(src="scripts/vendor.min.js")
+            script(src="scripts/main.min.js")
+

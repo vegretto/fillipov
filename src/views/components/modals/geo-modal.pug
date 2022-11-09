@@ -1,0 +1,56 @@
+.modal.-geo#modal-geo
+    ._body
+        ._close.js-close-modal
+            +icon('cross')
+        ._content
+            .city-choose
+                .city-choose__list
+                    .h3 Выберите ваш город:
+                    ul
+                        li
+                            a(data-city_id='4995' href='#' data-region='г. Москва') Москва
+                        li
+                            a(data-city_id='5000' href='#') Санкт-Петербург
+                        li
+                            a(data-city_id='3497' href='#') Новосибирск
+                        li
+                            a(data-city_id='3497' href='#') Екатеринбург
+                        li
+                            a(data-city_id='4760' href='#') Ростов-на-Дону
+                        li
+                            a(data-city_id='1775' href='#' data-region='Краснодарский край') Краснодар
+                        li
+                            a(data-city_id='2506' href='#') Волгоград
+                        li
+                            a(data-city_id='4346' href='#') Саратов
+                        li
+                            a(data-city_id='2287' href='#') Владивосток
+                        li
+                            a(data-city_id='4926' href='#' data-region='Тюменская обл.') Тюмень
+                    .form-group
+                        .easy-autocomplete(style='width: 270px;')
+                            input#js-city-input.input.js-city-input(type='text' name='search[city]' placeholder='Другой город' autocomplete='new-pass')
+                            #eac-container-eac-3518.easy-autocomplete-container
+                                ul(style='display: none;')
+                    .for-sng
+                        .h3 СНГ:
+                        ul
+                            li
+                                a(data-city_id='50232' href='#') Минск
+                            li
+                                a(data-city_id='406888' href='#') Нур-Султан
+                            li
+                                a(data-city_id='523348' href='#') Ташкент
+                                // <li><a data-city_id="4346" href="#">Ереван</a>
+                            li
+                                a(data-city_id='4346' href='#') Тбилиси
+                            li
+                                a(data-city_id='4346' href='#') Душанбе
+                            li
+                                a(data-city_id='4346' href='#') Бишкек
+                .city-choose__info
+                    span.city-choose__info-icon
+                        +icon('delivery-truck')
+                    .city-choose__info-text
+                        | Доставляем товары по всей России, в страны СНГ (Беларусь, Казахстан, Узбекистан, Армения, Таджикистан, Киргизия, Грузия) и Европы
+                    .city-choose__info-text Оплата доставки при получении

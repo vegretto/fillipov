@@ -1,0 +1,15 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    main.main-wrapper.page-list-page
+        .container
+            h2.h2 Список страниц
+            .page-list
+                a(href="main.html")._item Главная
+                a(href="category.html")._item Категория
+                a(href="product-card.html")._item Карточка товара
+                a(href="testimonials.html")._item Отзывы
+                a(href="catalog.html")._item Каталог

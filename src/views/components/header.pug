@@ -1,0 +1,78 @@
+header.header
+    include ../components/top-promo
+    ._top
+        ._container.container
+            ._top-box
+                ._session-city.js-open-modal(data-modal="#modal-geo")
+                    +icon('point')
+                    span Москва
+                nav._top-nav
+                    a(href="#")._top-nav-link О фабрике
+                    a(href="#")._top-nav-link.-with-number
+                        span Отзывы
+                        sup._subnumber 133
+                    a(href="#")._top-nav-link Блог
+                    a(href="#")._top-nav-link Наши работы
+                    a(href="#")._top-nav-link Оплата и доставка
+                    a(href="#")._top-nav-link Сотрудничество
+                    a(href="#")._top-nav-link.-with-icon
+                        +icon('gift')
+                        span ПОДАРКИ FILIPPOV
+                    a(href="#")._top-nav-link Контакты
+                ._account-links
+                    a(href="#")._account-link Вход
+                    a(href="#")._account-link Регистрация
+                ._mobile-search-toggle.js-mobile-search-toggle
+                    +icon('search')
+    ._middle
+        ._container.container
+            ._middle-box
+                ._mobile-menu-toggle.js-mobile-menu-toggle
+                    +icon('mobile-menu')
+                a(href="/")._logo
+                    +icon('logo')
+                ._hr
+                ._descriptor Ведущий спортивный бренд России
+                ._catalog-btn.common-btn-redesign.common-btn-redesign--yellow.js-catalog-menu-toggle КАТАЛОГ
+                ._search
+                    form
+                        input(type="search" placeholder="Например, боксерский мешок").input
+                        button(type="submit")._search-submit
+                            +icon('search')
+                ._contact-box
+                    a(href="tel:+74996817228")._phone 8 (499) 681 72 28
+                    ._working-hours Пн.-Пт., с 9:00 до 18:00
+                    a(href="tel:+74996817228")._mobile-phone
+                        +icon('phone')
+                ._cart-links
+                    a(href="#")._cart-link.-favourite
+                        +icon('heart')
+                        ._cart-link-qty 1
+                    a(href="#")._cart-link.-cart
+                        +icon('cart')
+                        ._cart-link-qty 5
+    ._bottom
+        ._container.container
+            nav._bottom-nav
+                a(href="#")._bottom-nav-link
+                    span Единоборства
+                    +icon('arrow-down')
+                a(href="#")._bottom-nav-link
+                    span Кроссфит | Турники | Тренажеры
+                    +icon('arrow-down')
+                a(href="#")._bottom-nav-link
+                    span Напольные покрытия
+                    +icon('arrow-down')
+                a(href="#")._bottom-nav-link.-sale
+                    span SALE
+                    +icon('percent')
+    ._mobile-search
+        form
+            ._mobile-search-box
+                input(type="search" placeholder="Например, боксерский мешок")
+                button(type="submit")._mobile-search-submit
+                    +icon('search')
+                ._mobile-search-close.js-close-search
+                    +icon('cross')
+    include ../components/mobile-menu
+    include ../components/catalog-menu

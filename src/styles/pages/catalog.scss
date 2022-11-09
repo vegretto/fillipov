@@ -1,0 +1,19 @@
+.catalog-top {
+  padding: 20px 0 0;
+
+  .h1 {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-previews-box {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .h2 {
+    margin-bottom: 20px;
+  }
+}

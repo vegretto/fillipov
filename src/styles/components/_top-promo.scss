@@ -1,0 +1,39 @@
+.top-promo {
+  padding: 10px 0;
+  @media (max-width: 991px) {
+    padding: 6px 0;
+  }
+
+  &__box {
+    position: relative;
+    padding-right: 25px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 4px;
+    cursor: pointer;
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      fill: $white;
+    }
+  }
+
+  &__text {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FADB99;
+    @media (max-width: 991px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

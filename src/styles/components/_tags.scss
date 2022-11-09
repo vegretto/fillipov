@@ -1,0 +1,38 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  &__tag-wrapper {
+    position: relative;
+
+    input {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      &:checked + label {
+        color: $template-dark-gray;
+        background: $orange-gradient;
+        border-color: $transparent;
+      }
+    }
+
+    label {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  &__tag {
+    font-size: 12px;
+    line-height: 21px;
+    color: $white;
+    margin: 5px;
+    border: 1px solid $white;
+    border-radius: 1px;
+    padding: 2px 10px 3px;
+  }
+}
+

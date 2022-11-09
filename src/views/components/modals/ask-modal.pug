@@ -1,0 +1,17 @@
+.modal.-ask#modal-ask
+    ._body
+        ._close.js-close-modal
+            +icon('cross')
+        ._content
+            ._title.h2.h2--white.h2--center ЗАДАТЬ ВОПРОС о товаре
+            ._form-title Ваш вопрос
+            form
+                ._form-wrapper
+                    +form-group-textarea('ask1', '', true, '', 'textarea', '', 'Ваш вопрос*')
+                    ._form-group-wrapper
+                        +form-group('text', 'ask2', '', true, 'input', '', 'Ваше имя*')
+                        +form-group('phone', 'ask3', '', false, 'input', '', 'Ваш телефон')
+                ._fields-box
+                    button(type="submit" data-modal="#modal-common-black").common-btn-redesign.-yellow.-with-icon.js-open-modal отправить
+                        +icon('arrows-multiple')
+                    +form-group-checkbox-allow('cb1', 'Согласие на обработку <a href="#">персональных данных</a>', false, true, 'checkbox-allow', 'label-allow')

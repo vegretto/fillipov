@@ -1,0 +1,124 @@
+.personal-discount {
+  background: linear-gradient(90deg, $template-blue 20%, $template-orange 90%);
+  padding: 60px 0 55px;
+  @media (max-width: 767px) {
+    padding: 20px 0 30px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    flex-basis: 540px;
+    max-width: 540px;
+    margin-right: 20px;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      margin-right: 0;
+      margin-bottom: 13px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: $white;
+    }
+  }
+
+  .h2 {
+    margin-bottom: 10px;
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    color: $white;
+    max-width: 390px;
+    @media (max-width: 991px) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__center {
+    flex-basis: 273px;
+    max-width: 273px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      margin-right: 0;
+      margin-bottom: 13px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 45px;
+    color: $white;
+    margin-bottom: 11px;
+    display: block;
+
+    &:hover {
+      text-decoration-color: $white;
+    }
+  }
+
+  .common-btn-redesign {
+    padding: 15px 20px;
+
+    .icon {
+      width: 40px;
+      height: 16px;
+      fill: $white;
+      margin-left: 28px;
+    }
+  }
+
+  &__right {
+    flex-basis: 170px;
+    max-width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      margin-right: 0;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__text-sm {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $white;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 15px;
+  }
+}

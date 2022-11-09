@@ -1,0 +1,97 @@
+.c-banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.c-banner {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 300px;
+  transition: .3s ease-in-out;
+  @media (max-width: 767px) {
+    min-height: 212px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 30px rgba(22, 40, 51, 0.25);
+    transition: .3s ease-in-out;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 21px;
+    height: 17px;
+    position: absolute;
+    right: 46px;
+    bottom: 35px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxLjUgOUwxMi43NSAwLjI1TDExIDJMMTUuNTkzOCA2LjU5Mzc1TDE3LjEyNSA3LjkwNjI1TDEzLjYyNSA3LjY4NzVIMC41VjEwLjMxMjVIMTMuNjI1TDE3LjEyNSAxMC4wOTM4TDE1LjU5MzggMTEuNDA2MkwxMSAxNkwxMi43NSAxNy43NUwyMS41IDlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: 767px) {
+      width: 15px;
+      height: 13px;
+      position: absolute;
+      right: 32px;
+      bottom: 28px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 767px) {
+      padding: 25px 30px;
+    }
+  }
+
+  &__title {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41px;
+    color: $white;
+    margin-bottom: 10px;
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+    color: $white;
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

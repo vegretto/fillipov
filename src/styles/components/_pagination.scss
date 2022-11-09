@@ -1,0 +1,49 @@
+.pagination-box {
+  display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .common-btn-redesign {
+    margin-right: 17px;
+    @media (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  border: 1px solid $border-gray;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    color: $template-dark-gray;
+    background-color: $white;
+    border-right: 1px solid $border-gray;
+
+    &:hover {
+      background-color: $template-black;
+      color: $white;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &--current {
+      background-color: $template-black;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.showrooms-rating {
+  background-color: #F6F6F6;
+  padding: 50px 0 60px;
+  @media (max-width: 767px) {
+    padding: 20px 0 30px;
+  }
+
+  &__widgets {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    @media (max-width: 991px) {
+      justify-content: flex-start;
+    }
+    @media (max-width: 600px) {
+      width: calc(100% + 24px);
+      max-width: calc(100% + 24px);
+      margin-left: -12px;
+    }
+  }
+
+  &__widget {
+    flex-basis: 400px;
+    max-width: 400px;
+    position: relative;
+    height: 800px;
+    margin-right: 60px;
+    flex-shrink: 0;
+    @media (max-width: 600px) {
+      flex-basis: 300px;
+      max-width: 300px;
+      margin-right: 0;
+      margin-left: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      @media (max-width: 600px) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

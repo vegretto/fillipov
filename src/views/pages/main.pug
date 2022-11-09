@@ -1,0 +1,723 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    main.main-wrapper.main-page
+        section.main-slogan
+            ._container.container
+                ._bg
+                    +pictureAdaptive('main-slogan-bg', 'png', 1525, 129)
+                h1._text Инновации и громкие премьеры в мире спорта
+        section.main-page-banners.common-section
+            ._container.container
+                a(href="#").main-banner
+                    ._bg
+                        +pictureAdaptive('main-banner-bg', 'png', 1320, 531)
+                    ._content
+                        ._title Спарринг-партнер FILIPPOV&nbsp;®
+                        ._subtitle-box
+                            ._subtitle.-highlited Громкая премьера 2021 года
+                            ._subtitle на HARDCORE MMA
+                        +icon('star')
+                        ._text Сделано в России<br>Аналогов в мире — нет
+                .a-banners
+                    a(href="#").a-banner.-small
+                        ._bg
+                            +pictureAdaptive('a-banner-1', 'png', 516, 346)
+                        ._content
+                            ._title Напольные мешки<br>SMART FIGHT FILIPPOV
+                            ._text Маятниковая динамика<br>и отработка боя в партере
+                            ._highlited Лидер продаж 2020–2022
+                    a(href="#").a-banner.-large
+                        ._bg
+                            +pictureAdaptive('a-banner-2', 'png', 784, 346)
+                        ._content
+                            ._title Уникальный гелевый<br>наполнитель
+                            ._text Смотреть снаряды серии<br>GEL FILIPPOV
+                            ._highlited Только в FILIPPOV DYNASTY
+                    a(href="#").a-banner.-large
+                        ._bg
+                            +pictureAdaptive('a-banner-3', 'png', 784, 346)
+                        ._content
+                            ._title Тренируйся в любую погоду<br>по своим правилам
+                            ._text Серия уличных снарядов Street Kick FILIPPOV
+                            ._highlited Защита от осадков и выгорания 200%
+                    a(href="#").a-banner.-small
+                        ._bg
+                            +pictureAdaptive('a-banner-4', 'png', 516, 346)
+                        ._content
+                            ._title Жилет-утяжелитель<br>HARD TRAINING FILIPPOV
+                            ._highlited Тренируйся на полную мощность
+        section.top-10-products.common-section
+            ._container.container
+                h2.h2.-with-highlight #[span.highlighted ТОП-10] популярных снарядов FILIPPOV DYNASTY 2022
+                .product-slider-redesign
+                        ._box.js-product-slider-redesign
+                            ._wrapper.swiper-wrapper
+                                .product-preview.swiper-slide
+                                    a(href="#")._img
+                                        +picture('product-slider', 'png', 330, 360)
+                                    ._content
+                                        ._top-box
+                                            .rating-box
+                                                .rating-stars.js-stars(data-rating="4.6")
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                ._rating 4.6
+                                            ._favourite.js-active-toggle
+                                                +icon('heart')
+                                        ._middle-box
+                                            ._assortment-item Размеры - 4
+                                            ._assortment-item цвета - 3
+                                        a(href="#")._title Напольный мешок-имитатор «onePRO FILIPPOV» Ø37
+                                        ._bottom-box
+                                            ._price-box
+                                                ._old-price от 16 800₽
+                                                ._price от 14 150₽
+                                            ._add-to-cart.js-open-picker
+                                                +icon('cart')
+                                        a(href="#")._link
+                                            span Смотреть
+                                            +icon('product-slider-arrow')
+                                    ._quick-view-toggle.js-quick-view Быстрый просмотр
+                                        +icon('arrows-multiple')
+                                    .color-size-picker
+                                        ._close.js-close
+                                            +icon('cross')
+                                        form
+                                            ._box
+                                                ._title Выберите цвет:
+                                                ._items
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #e90000")
+                                                        ._item-name Красный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #353535")
+                                                        ._item-name Чёрный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #B0B0B0")
+                                                        ._item-name Серый
+                                                        input(type="radio" name="colors")
+                                            ._box
+                                                ._title Выберите размер:
+                                                ._items
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 2кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 3кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 4кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 5кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                            .common-btn-wrapper-redesign
+                                                button(type="submit").common-btn-redesign.-yellow.-center.js-add-to-cart В корзину
+                                .product-preview.swiper-slide
+                                    a(href="#")._img
+                                        +picture('product-slider', 'png', 330, 360)
+                                    ._content
+                                        ._top-box
+                                            .rating-box
+                                                .rating-stars.js-stars(data-rating="4.6")
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                ._rating 4.6
+                                            ._favourite.js-active-toggle
+                                                +icon('heart')
+                                        ._middle-box
+                                            ._assortment-item Размеры - 4
+                                            ._assortment-item цвета - 3
+                                        a(href="#")._title Напольный мешок-имитатор «onePRO FILIPPOV» Ø37
+                                        ._bottom-box
+                                            ._price-box
+                                                ._old-price от 16 800₽
+                                                ._price от 14 150₽
+                                            ._add-to-cart.js-open-picker
+                                                +icon('cart')
+                                        a(href="#")._link
+                                            span Смотреть
+                                            +icon('product-slider-arrow')
+                                    ._quick-view-toggle.js-quick-view Быстрый просмотр
+                                        +icon('arrows-multiple')
+                                    .color-size-picker
+                                        ._close.js-close
+                                            +icon('cross')
+                                        form
+                                            ._box
+                                                ._title Выберите цвет:
+                                                ._items
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #e90000")
+                                                        ._item-name Красный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #353535")
+                                                        ._item-name Чёрный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #B0B0B0")
+                                                        ._item-name Серый
+                                                        input(type="radio" name="colors")
+                                            ._box
+                                                ._title Выберите размер:
+                                                ._items
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 2кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 3кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 4кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 5кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                            .common-btn-wrapper-redesign
+                                                button(type="submit").common-btn-redesign.-yellow.-center.js-add-to-cart В корзину
+                                .product-preview.swiper-slide
+                                    a(href="#")._img
+                                        +picture('product-slider', 'png', 330, 360)
+                                    ._content
+                                        ._top-box
+                                            .rating-box
+                                                .rating-stars.js-stars(data-rating="4.6")
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                ._rating 4.6
+                                            ._favourite.js-active-toggle
+                                                +icon('heart')
+                                        ._middle-box
+                                            ._assortment-item Размеры - 4
+                                            ._assortment-item цвета - 3
+                                        a(href="#")._title Напольный мешок-имитатор «onePRO FILIPPOV» Ø37Напольный мешок-имитатор «onePRO FILIPPOV» Ø37
+                                        ._bottom-box
+                                            ._price-box
+                                                ._old-price от 16 800₽
+                                                ._price от 14 150₽
+                                            ._add-to-cart.js-open-picker
+                                                +icon('cart')
+                                        a(href="#")._link
+                                            span Смотреть
+                                            +icon('product-slider-arrow')
+                                    ._quick-view-toggle.js-quick-view Быстрый просмотр
+                                        +icon('arrows-multiple')
+                                    .color-size-picker
+                                        ._close.js-close
+                                            +icon('cross')
+                                        form
+                                            ._box
+                                                ._title Выберите цвет:
+                                                ._items
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #e90000")
+                                                        ._item-name Красный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #353535")
+                                                        ._item-name Чёрный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #B0B0B0")
+                                                        ._item-name Серый
+                                                        input(type="radio" name="colors")
+                                            ._box
+                                                ._title Выберите размер:
+                                                ._items
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 2кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 3кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 4кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 5кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                            .common-btn-wrapper-redesign
+                                                button(type="submit").common-btn-redesign.-yellow.-center.js-add-to-cart В корзину
+                                .product-preview.swiper-slide
+                                    a(href="#")._img
+                                        +picture('product-slider', 'png', 330, 360)
+                                    ._content
+                                        ._top-box
+                                            .rating-box
+                                                .rating-stars.js-stars(data-rating="4.6")
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                ._rating 4.6
+                                            ._favourite.js-active-toggle
+                                                +icon('heart')
+                                        ._middle-box
+                                            ._assortment-item Размеры - 4
+                                            ._assortment-item цвета - 3
+                                        a(href="#")._title Напольный мешок-имитатор «onePRO FILIPPOV» Ø37 Напольный мешок-имитатор «onePRO FILIPPOV» Ø37 «onePRO FILIPPOV» Ø37
+                                        ._bottom-box
+                                            ._price-box
+                                                ._old-price от 16 800₽
+                                                ._price от 14 150₽
+                                            ._add-to-cart.js-open-picker
+                                                +icon('cart')
+                                        a(href="#")._link
+                                            span Смотреть
+                                            +icon('product-slider-arrow')
+                                    ._quick-view-toggle.js-quick-view Быстрый просмотр
+                                        +icon('arrows-multiple')
+                                    .color-size-picker
+                                        ._close.js-close
+                                            +icon('cross')
+                                        form
+                                            ._box
+                                                ._title Выберите цвет:
+                                                ._items
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #e90000")
+                                                        ._item-name Красный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #353535")
+                                                        ._item-name Чёрный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #B0B0B0")
+                                                        ._item-name Серый
+                                                        input(type="radio" name="colors")
+                                            ._box
+                                                ._title Выберите размер:
+                                                ._items
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 2кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 3кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 4кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 5кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                            .common-btn-wrapper-redesign
+                                                button(type="submit").common-btn-redesign.-yellow.-center.js-add-to-cart В корзину
+                                .product-preview.swiper-slide
+                                    a(href="#")._img
+                                        +picture('product-slider', 'png', 330, 360)
+                                    ._content
+                                        ._top-box
+                                            .rating-box
+                                                .rating-stars.js-stars(data-rating="4.6")
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                ._rating 4.6
+                                            ._favourite.js-active-toggle
+                                                +icon('heart')
+                                        ._middle-box
+                                            ._assortment-item Размеры - 4
+                                            ._assortment-item цвета - 3
+                                        a(href="#")._title Напольный мешок-имитатор «onePRO FILIPPOV» Ø37
+                                        ._bottom-box
+                                            ._price-box
+                                                ._old-price от 16 800₽
+                                                ._price от 14 150₽
+                                            ._add-to-cart.js-open-picker
+                                                +icon('cart')
+                                        a(href="#")._link
+                                            span Смотреть
+                                            +icon('product-slider-arrow')
+                                    ._quick-view-toggle.js-quick-view Быстрый просмотр
+                                        +icon('arrows-multiple')
+                                    .color-size-picker
+                                        ._close.js-close
+                                            +icon('cross')
+                                        form
+                                            ._box
+                                                ._title Выберите цвет:
+                                                ._items
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #e90000")
+                                                        ._item-name Красный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #353535")
+                                                        ._item-name Чёрный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #B0B0B0")
+                                                        ._item-name Серый
+                                                        input(type="radio" name="colors")
+                                            ._box
+                                                ._title Выберите размер:
+                                                ._items
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 2кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 3кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 4кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 5кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                            .common-btn-wrapper-redesign
+                                                button(type="submit").common-btn-redesign.-yellow.-center.js-add-to-cart В корзину
+                                .product-preview.swiper-slide
+                                    a(href="#")._img
+                                        +picture('product-slider', 'png', 330, 360)
+                                    ._content
+                                        ._top-box
+                                            .rating-box
+                                                .rating-stars.js-stars(data-rating="4.6")
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                    ._star
+                                                        +icon('empty-star')
+                                                ._rating 4.6
+                                            ._favourite.js-active-toggle
+                                                +icon('heart')
+                                        ._middle-box
+                                            ._assortment-item Размеры - 4
+                                            ._assortment-item цвета - 3
+                                        a(href="#")._title Напольный мешок-имитатор «onePRO FILIPPOV» Ø37
+                                        ._bottom-box
+                                            ._price-box
+                                                ._old-price от 16 800₽
+                                                ._price от 14 150₽
+                                            ._add-to-cart.js-open-picker
+                                                +icon('cart')
+                                        a(href="#")._link
+                                            span Смотреть
+                                            +icon('product-slider-arrow')
+                                    ._quick-view-toggle.js-quick-view Быстрый просмотр
+                                        +icon('arrows-multiple')
+                                    .color-size-picker
+                                        ._close.js-close
+                                            +icon('cross')
+                                        form
+                                            ._box
+                                                ._title Выберите цвет:
+                                                ._items
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #e90000")
+                                                        ._item-name Красный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #353535")
+                                                        ._item-name Чёрный
+                                                        input(type="radio" name="colors")
+                                                    label._color.js-only-active-toggle
+                                                        ._color-circle(style="background-color: #B0B0B0")
+                                                        ._item-name Серый
+                                                        input(type="radio" name="colors")
+                                            ._box
+                                                ._title Выберите размер:
+                                                ._items
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 2кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 3кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 4кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                                    label._size.js-only-active-toggle
+                                                        ._size-cb-dummy
+                                                        ._item-name 5кг / Ø25см
+                                                        input(type="radio" name="sizes")
+                                            .common-btn-wrapper-redesign
+                                                button(type="submit").common-btn-redesign.-yellow.-center.js-add-to-cart В корзину
+                            ._arrow.-prev
+                                +icon('slider-arrow')
+                            ._arrow.-next
+                                +icon('slider-arrow')
+                .common-btn-wrapper-redesign
+                    a(href="#").common-btn-redesign.-center На страницу рейтинга
+        section.unique-design.common-section
+            ._container.container
+                h2.h2 Уникальный дизайн
+                .d-banners
+                    a(href="#").d-banner.-small
+                        ._bg
+                            +pictureAdaptive('b-banner-1', 'png', 650, 346)
+                        ._content
+                            .__title-box
+                                ._title Тренируйся
+                                ._title.-highlited с диким азартом
+                            ._text «Дикий» дизайн снарядов<br>серии DIKO FILIPPOV
+                    a(href="#").d-banner.-large
+                        ._bg
+                            +pictureAdaptive('b-banner-2', 'png', 650, 712)
+                        ._content
+                            .__title-box
+                                ._title Профессиональная серия
+                                ._title.-highlited onePro FILIPPOV
+                            ._text Сдержанная и стильная классика<br>для настоящих ценителей
+                    a(href="#").d-banner.-small
+                        ._bg
+                            +pictureAdaptive('b-banner-3', 'png', 650, 346)
+                        ._content
+                            .__title-box
+                                ._title Премиальная серия
+                                ._title.-highlited ELITE 1995 FILIPPOV
+                            ._text Богатый коньячный цвет<br>Итальянская кожа TrygSol<br>Совершенство в каждой детали
+        section.series-new.common-section
+            ._container.container
+                h2.h2.-white Серии filippov dynasty
+                ._items.js-swipe-scroll
+                    a(href="#")._item
+                        ._item-img
+                            +pictureNoWebp('series-new-1', 'svg')
+                        ._item-text Описание серии длинной символов на несколько строк или предложений.
+                    a(href="#")._item
+                        ._item-img
+                            +pictureNoWebp('series-new-2', 'svg')
+                        ._item-text Описание серии длинной символов на несколько строк или предложений.
+                    a(href="#")._item
+                        ._item-img
+                            +pictureNoWebp('series-new-3', 'svg')
+                        ._item-text Описание серии длинной символов на несколько строк или предложений.
+                    a(href="#")._item
+                        ._item-img
+                            +pictureNoWebp('series-new-4', 'svg')
+                        ._item-text Описание серии длинной символов на несколько строк или предложений.
+                    a(href="#")._item
+                        ._item-img
+                            +pictureNoWebp('series-new-5', 'svg')
+                        ._item-text Описание серии длинной символов на несколько строк или предложений.
+                    a(href="#")._item
+                        ._item-img
+                            +pictureNoWebp('series-new-6', 'svg')
+                        ._item-text Описание серии длинной символов на несколько строк или предложений.
+        section.best-offer.common-section
+            ._container.container
+                h2.h2 Выгодные предложения
+                .c-banners
+                    a(href="#").c-banner
+                        ._bg
+                            +pictureAdaptive('c-banner-1', 'png', 650, 300)
+                        ._content
+                            ._title FILIPPOV OUTLET
+                            ._text Снаряды из коллекции прошлого года<br>#[span(style="color: #FFDE7D") со скидкой до 60%]
+                    a(href="#").c-banner
+                        ._bg
+                            +pictureAdaptive('c-banner-2', 'png', 650, 300)
+                        ._content
+                            ._title FILIPPOV sale
+                            ._text Успейте купить премиальные снаряды<br>Pro-серии со скидкой
+        section.our-works.common-section
+            ._container.container
+                ._title Filippov dynasty
+                ._subtitle разработано и произведено в россии
+            ._box
+                ._map#works-map(data-json="data/works-map-data.json")
+                    .placeholder
+                        +picture('works-map', 'png')
+                    .loader
+                    template#works-map-template
+                        .works-modal
+                            .works-modal__content
+                                button.works-modal__close(type='button' title='Закрыть окно') X
+                                .our-project
+                                    .our-project__img(data-count='')
+                                        a(href='' data-video-project='')
+                                            img(src='' alt='')
+                                            .our-project__cover
+                                                span.our-project__icon
+                                                    +icon('photo-camera')
+                                                    +icon('play-btn')
+                                                span.our-project__img-num
+                                    .our-project__content
+                                        .our-project__title
+                                        .our-project__date
+                                        .our-project__desc
+                a(href="#")._content
+                    ._text Фотографии спортивных клубов, оборудованных FILIPPOV DYNASTY
+                    ._link
+                        span Перейти
+                        +icon('arrow-right')
+        section.showrooms
+            ._container.container
+                h2.h2 Ждем тебя в наших шоурумах
+                ._imgs
+                    ._img
+                        +picture('showrooms-1', 'png', 362, 247)
+                    ._img
+                        +picture('showrooms-2', 'png', 362, 247)
+                    ._img
+                        +picture('showrooms-3', 'png', 362, 247)
+                    ._img
+                        +picture('showrooms-4', 'png', 362, 247)
+            ._contacts
+                ._container.container
+                    ._items
+                        ._item
+                            ._title-box
+                                +icon('point')
+                                ._item-title офис продаж и шоурум в&nbsp;г.&nbsp;Москва
+                            a(href="tel:84996480223")._phone 8 (499) 648 02 23
+                            a(href="mailto:sales@filippov-dynasty.ru")._mail sales@filippov-dynasty.ru
+                            ._address г.&nbsp;Москва, ул.&nbsp;5-я кабельная, д.2, ТРК “Спортех” (м.&nbsp;Авиамоторная&nbsp;и&nbsp;МЦК&nbsp;/&nbsp;Нижегородская)
+                            ._working-hours Время работы: #[span.txt-orange по звонку]
+                        ._item
+                            ._title-box
+                                +icon('point')
+                                ._item-title Спортивный магазин-шоурум в&nbsp;г.пятигорск
+                            a(href="tel:84996480223")._phone 8 (499) 648 02 23
+                            a(href="mailto:sales@filippov-dynasty.ru")._mail sales@filippov-dynasty.ru
+                            ._address Ставропольский край, г.&nbsp;Пятигорск, ул.&nbsp;Бунимовича,&nbsp;7 (ТЦ Планета)
+                            ._working-hours Время работы: #[span.txt-orange по звонку]
+                        ._item
+                            ._title-box
+                                +icon('point')
+                                ._item-title склад в г.Москва
+                            a(href="tel:84996480223")._phone 8 (499) 648 02 23
+                            a(href="mailto:sales@filippov-dynasty.ru")._mail sales@filippov-dynasty.ru
+                            ._address г.&nbsp;Москва, ул.&nbsp;5-я кабельная, д.2, ТРК “Спортех” (м.&nbsp;Авиамоторная&nbsp;и&nbsp;МЦК&nbsp;/&nbsp;Нижегородская)
+                            ._working-hours Время работы: #[span.txt-orange по звонку]
+        section.shipment-destinations
+            ._container.container
+                h2.h2.-white Куда мы доставляем товары
+                ._box
+                    ._countries
+                        ._country Россия
+                        ._country Беларусь
+                        ._country Казахстан
+                        ._country Армения
+                        ._country Таджикистан
+                        ._country Узбекистан
+                        ._country Киргизия
+                        ._country Страны Европы
+                    ._cities
+                        a._city(href='#') Санкт-Петербург
+                            a._city(href='#') Казань
+                            a._city(href='#') Екатеринбург
+                            a._city(href='#') Челябинск
+                            a._city(href='#') Ростов-на-Дону
+                            a._city(href='#') Пермь
+                            a._city(href='#') Новосибирск
+                            a._city(href='#') Нижний Новгород
+                            a._city(href='#') Краснодар
+                            a._city(href='#') Минск
+                            a._city(href='#') Алма-Ата
+                            a._city(href='#') Уфа
+                            a._city(href='#') Волгоград
+                            a._city(href='#') Воронеж
+                            a._city(href='#') Владивосток
+                            a._city(href='#') Калининград
+                            a._city(href='#') Красноярск
+                            a._city(href='#') Ставрополь
+                            a._city(href='#') Ереван
+                            a._city(href='#') Нур-Султан
+                .common-btn-wrapper-redesign
+                    a(href="#").common-btn-redesign.-center Все города
+        section.subscribe-blocks
+            .promo-subscribe
+                ._inner
+                    ._title Подпишитесь на&nbsp;новости&nbsp;и&nbsp;акции
+                    form
+                        .form-box
+                            input(type="email" placeholder="E-mail").input
+                            button(type="submit").common-btn-redesign.-yellow Подписаться
+                        +form-group-checkbox-allow('cb1', 'Согласие на обработку <a href="#">персональных данных</a>', false, true, 'checkbox-allow', 'label-allow')
+            .social-subscribe
+                ._title Подписывайтесь на нас в&nbsp;социальных&nbsp;сетях
+                ._box
+                    ._social-links
+                        a(href="#")._social-link
+                            +icon('vk')
+                        a(href="#")._social-link
+                            +icon('yt')
+                        a(href="#")._social-link
+                            +icon('tg')
+                    .made-in
+                        +icon('made-in')
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,410 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header-with-breads
+block content
+    main.main-wrapper.testimonials-page
+        section.testimonials-top
+            ._container.container
+                ._inner
+                    ._left
+                        ._title-box
+                            h1.h1 Отзывы о FILIPPOV DYNASTY
+                            ._qty 78 отзывов
+                        ._links
+                            a(href="#testimonials")._link.js-scroll-to
+                                +icon('answer')
+                                | Отзывы на сайте
+                            ._link-box
+                                a(href="#shop-rating")._link.js-scroll-to
+                                    +picture('market-icon', 'png', 18, 18)
+                                    | Отзывы на Яндекс.Маркет
+                                .rating-box
+                                    ._text Рейтинг магазина
+                                    .rating-stars.js-stars(data-rating="4.6")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating 4.6
+                            a(href="#showrooms-rating")._link.js-scroll-to
+                                +icon('simple-point')
+                                | Отзывы о шоурумах
+                    ._right
+                        a(href="#" data-modal="#modal-add-testimonial").common-btn-redesign.-yellow.-with-icon.js-open-modal Оставить отзыв
+                            +icon('arrows-multiple')
+        section.testimonials-main.common-section
+            ._container.container
+                ._filters
+                    ._checkboxes
+                        +form-group-checkbox('cb-f1', 'С фотографиями', false, false, false, 'checkbox', 'label')
+                        +form-group-checkbox('cb-f2', 'С видео', false, false, false, 'checkbox', 'label')
+                        +form-group-checkbox('cb-f3', 'Аудиоотзывы', false, false, false, 'checkbox', 'label')
+                    ._select
+                        .form-group.form-group--select
+                            label Сортировка:
+                            .custom-select.js-custom-select.js-open-popup
+                                span.custom-select__value От новых к старым
+                                .custom-select-options.js-popup
+                                    .custom-select-option(data-value="1") Новые
+                                    .custom-select-option(data-value="2") Старые
+                                    .custom-select-option(data-value="3") Высокая оценка
+                                    .custom-select-option(data-value="4") Низкая оценка
+                                select#select1
+                                    option(value="1") Новые
+                                    option(value="2") Старые
+                                    option(value="3") Высокая оценка
+                                    option(value="4") Низкая оценка
+                .testimonials#testimonials
+                    .testimonial
+                        ._bg-gradient
+                        ._inner
+                            ._left-box
+                                ._top-box
+                                    ._top-subbox
+                                        ._date 24 июня 2021
+                                        ._main-tag.-yellow Новый
+                                    ._top-subbox
+                                        ._name Илья
+                                        ._city
+                                            +icon('city')
+                                            ._city-name Москва
+                                ._voice-box
+                                    audio(src="data/testimonial.mp3" controls controlsList="nodownload noplaybackrate" preload="none")
+                                ._content-box.-product
+                                    ._subtitle Отзыв о товаре
+                                    ._products
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                ._content-box
+                                    ._subtitle Впечатления
+                                    .tags
+                                        ._tag Высокое качество &#11088;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Высокое качество &#11088;
+                                ._content-box
+                                    ._subtitle Фото и видео
+                                    ._gallery.js-swipe-scroll
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item.-video
+                                            +videoFancybox('testimonial-1', 'mp4', 'testimonial-2', 'png', 176, 132, 'testimonial-1', true)
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                            ._right-box
+                                .rating-box
+                                    .rating-stars.js-stars(data-rating="4.6")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating 4.6
+                                ._rm-additional-wrapper.js-read-more-additional-wrapper
+                                    ._text-box.read-more-wrapper.js-read-more-wrapper
+                                        ._text.read-more-container.js-read-more-container Тренировки стали значительно звонче, работаем по очереди. Качество огонь, в меру мягкие, но и не жесткие. Кожа лучше чем у меня на кроссовках, а кроссы между прочим New Balance, отдельное спасибо за быструю доставку. Отличные лапы. Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.
+                                    ._rm-toggle.read-more-toggle.js-read-more-toggle Показать еще
+                                ._answer-box
+                                    ._answer-toggle.js-answer-toggle
+                                        +icon('answer')
+                                        | Смотреть ответ
+                                    ._answer
+                                        ._answer-text Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам)
+                                        ._answerer С уважением, команда FILIPPOV DYNASTY
+                                ._quotes “
+                    .testimonial
+                        ._bg-gradient
+                        ._inner
+                            ._left-box
+                                ._top-box
+                                    ._top-subbox
+                                        ._date 24 июня 2021
+                                        ._main-tag.-yellow Новый
+                                    ._top-subbox
+                                        ._name Илья
+                                        ._city
+                                            +icon('city')
+                                            ._city-name Москва
+                                ._content-box.-product
+                                    ._subtitle Отзыв о товаре
+                                    ._products
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                ._content-box
+                                    ._subtitle Впечатления
+                                    .tags
+                                        ._tag Высокое качество &#11088;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Высокое качество &#11088;
+                                ._content-box
+                                    ._subtitle Фото и видео
+                                    ._gallery.js-swipe-scroll
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item.-video
+                                            +videoFancybox('testimonial-1', 'mp4', 'testimonial-2', 'png', 176, 132, 'testimonial-1', true)
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                            ._right-box
+                                .rating-box
+                                    .rating-stars.js-stars(data-rating="4.6")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating 4.6
+                                ._rm-additional-wrapper.js-read-more-additional-wrapper
+                                    ._text-box.read-more-wrapper.js-read-more-wrapper
+                                        ._text.read-more-container.js-read-more-container Тренировки стали значительно звонче, работаем по очереди. Качество огонь, в меру мягкие, но и не жесткие. Кожа лучше чем у меня на кроссовках, а кроссы между прочим New Balance, отдельное спасибо за быструю доставку.
+                                    ._rm-toggle.read-more-toggle.js-read-more-toggle Показать еще
+                                ._answer-box
+                                    ._answer-toggle.js-answer-toggle
+                                        +icon('answer')
+                                        | Смотреть ответ
+                                    ._answer
+                                        ._answer-text Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам)
+                                        ._answerer С уважением, команда FILIPPOV DYNASTY
+                                ._quotes “
+                    .testimonial
+                        ._bg-gradient
+                        ._inner
+                            ._left-box
+                                ._top-box
+                                    ._top-subbox
+                                        ._date 24 июня 2021
+                                        ._main-tag.-yellow Новый
+                                    ._top-subbox
+                                        ._name Илья
+                                        ._city
+                                            +icon('city')
+                                            ._city-name Москва
+                                ._voice-box
+                                    audio(src="data/testimonial.mp3" controls controlsList="nodownload noplaybackrate" preload="none")
+                                ._content-box.-product
+                                    ._subtitle Отзыв о товаре
+                                    ._products
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                ._content-box
+                                    ._subtitle Впечатления
+                                    .tags
+                                        ._tag Высокое качество &#11088;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Высокое качество &#11088;
+                                ._content-box
+                                    ._subtitle Фото и видео
+                                    ._gallery.js-swipe-scroll
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item.-video
+                                            +videoFancybox('testimonial-1', 'mp4', 'testimonial-2', 'png', 176, 132, 'testimonial-1', true)
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                            ._right-box
+                                .rating-box
+                                    .rating-stars.js-stars(data-rating="4.6")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating 4.6
+                                ._rm-additional-wrapper.js-read-more-additional-wrapper
+                                    ._text-box.read-more-wrapper.js-read-more-wrapper
+                                        ._text.read-more-container.js-read-more-container Тренировки стали значительно звонче, работаем по очереди. Качество огонь, в меру мягкие, но и не жесткие. Кожа лучше чем у меня на кроссовках, а кроссы между прочим New Balance, отдельное спасибо за быструю доставку. Отличные лапы. Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.
+                                    ._rm-toggle.read-more-toggle.js-read-more-toggle Показать еще
+                                ._answer-box
+                                    ._answer-toggle.js-answer-toggle
+                                        +icon('answer')
+                                        | Смотреть ответ
+                                    ._answer
+                                        ._answer-text Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам)
+                                        ._answerer С уважением, команда FILIPPOV DYNASTY
+                                ._quotes “
+                    .testimonial
+                        ._bg-gradient
+                        ._inner
+                            ._left-box
+                                ._top-box
+                                    ._top-subbox
+                                        ._date 24 июня 2021
+                                        ._main-tag.-yellow Новый
+                                    ._top-subbox
+                                        ._name Илья
+                                        ._city
+                                            +icon('city')
+                                            ._city-name Москва
+                                ._voice-box
+                                    audio(src="data/testimonial.mp3" controls controlsList="nodownload noplaybackrate" preload="none")
+                                ._content-box.-product
+                                    ._subtitle Отзыв о товаре
+                                    ._products
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                        a(href="#")._product Лапы профессиональные изогнутые onePRO FILIPPOV
+                                ._content-box
+                                    ._subtitle Впечатления
+                                    .tags
+                                        ._tag Высокое качество &#11088;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Крутой дизайн
+                                        ._tag Общение с менеджером &#128077;
+                                        ._tag Высокое качество &#11088;
+                                ._content-box
+                                    ._subtitle Фото и видео
+                                    ._gallery.js-swipe-scroll
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item.-video
+                                            +videoFancybox('testimonial-1', 'mp4', 'testimonial-2', 'png', 176, 132, 'testimonial-1', true)
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-1', 'png', 176, 132, 'testimonial-1')
+                                        ._gallery-item
+                                            +pictureFancybox('testimonial-3', 'png', 176, 132, 'testimonial-1')
+                            ._right-box
+                                .rating-box
+                                    .rating-stars.js-stars(data-rating="4.6")
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                        ._star
+                                            +icon('empty-star')
+                                    ._rating 4.6
+                                ._rm-additional-wrapper.js-read-more-additional-wrapper
+                                    ._text-box.read-more-wrapper.js-read-more-wrapper
+                                        ._text.read-more-container.js-read-more-container Тренировки стали значительно звонче, работаем по очереди. Качество огонь, в меру мягкие, но и не жесткие. Кожа лучше чем у меня на кроссовках, а кроссы между прочим New Balance, отдельное спасибо за быструю доставку. Отличные лапы. Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.
+                                    ._rm-toggle.read-more-toggle.js-read-more-toggle Показать еще
+                                ._answer-box
+                                    ._answer-toggle.js-answer-toggle
+                                        +icon('answer')
+                                        | Смотреть ответ
+                                    ._answer
+                                        ._answer-text Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам) Добрый день, Андрей. Спасибо за ваш отзыв. Удачи и спортивных побед вашим юным чемпионам)
+                                        ._answerer С уважением, команда FILIPPOV DYNASTY
+                                ._quotes “
+                .common-btn-wrapper-redesign
+                    button(type="submit").common-btn-redesign.-center Показать еще
+        section.shop-rating.common-section#shop-rating
+            ._container.container
+                h2.h2 Рейтинг магазина на яндекс.маркет
+                ._box
+                    ._main-img
+                        +picture('shop-rating-main', 'png', 269, 327)
+                    ._slider.js-shop-rating-slider
+                        ._wrapper.swiper-wrapper
+                            ._slide.swiper-slide
+                                +picture('shop-rating1', 'png', 438, 335)
+                            ._slide.swiper-slide
+                                +picture('shop-rating1', 'png', 438, 335)
+                            ._slide.swiper-slide
+                                +picture('shop-rating1', 'png', 438, 335)
+                            ._slide.swiper-slide
+                                +picture('shop-rating1', 'png', 438, 335)
+                            ._slide.swiper-slide
+                                +picture('shop-rating1', 'png', 438, 335)
+                        ._arrow.-prev
+                            +icon('slider-arrow')
+                        ._arrow.-next
+                            +icon('slider-arrow')
+        section.showrooms-rating#showrooms-rating
+            ._container.container
+                h2.h2 Рейтинг шоурумов на яндекс.карте
+                ._widgets
+                    ._widget
+                        <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/42198483771?comments"></iframe><a href="https://yandex.ru/maps/org/filippov_dynasty/42198483771/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Filippov Dynasty на карте Пятигорска — Яндекс Карты</a>
+                    ._widget
+                        <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/42198483771?comments"></iframe><a href="https://yandex.ru/maps/org/filippov_dynasty/42198483771/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Filippov Dynasty на карте Пятигорска — Яндекс Карты</a>
+        section.our-works
+            ._box
+                ._map#works-map(data-json="data/works-map-data.json")
+                    .placeholder
+                        +picture('works-map', 'png')
+                    .loader
+                    template#works-map-template
+                        .works-modal
+                            .works-modal__content
+                                button.works-modal__close(type='button' title='Закрыть окно') X
+                                .our-project
+                                    .our-project__img(data-count='')
+                                        a(href='' data-video-project='')
+                                            img(src='' alt='')
+                                            .our-project__cover
+                                                span.our-project__icon
+                                                    +icon('photo-camera')
+                                                    +icon('play-btn')
+                                                span.our-project__img-num
+                                    .our-project__content
+                                        .our-project__title
+                                        .our-project__date
+                                        .our-project__desc
+                a(href="#")._content
+                    ._text Фотографии спортивных клубов, оборудованных FILIPPOV DYNASTY
+                    ._link
+                        span Перейти
+                        +icon('arrow-right')

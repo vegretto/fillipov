@@ -1,0 +1,42 @@
+.catalog-sidebar {
+  border: 1px solid $border-gray;
+  border-radius: 5px;
+  padding: 30px;
+  max-width: 346px;
+  @media (max-width: 767px) {
+    padding: 20px 15px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $template-dark-gray;
+    padding: 8px 0;
+
+    &:hover {
+      color: $template-blue;
+    }
+
+    &--current {
+      color: $template-orange;
+    }
+  }
+}
+

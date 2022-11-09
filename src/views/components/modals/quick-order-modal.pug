@@ -1,0 +1,13 @@
+.modal.-quick-order#modal-quick-order
+    ._body
+        ._close.js-close-modal
+            +icon('cross')
+        ._content
+            ._title Введите ваше имя и телефон. Наш менеджер перезвонит вам для оформления заказа.
+            form
+                ._form-box
+                    +form-group('text', 'mc1', '', true, 'input', '', 'Как вас зовут?')
+                    +form-group('tel', 'mc2', '', true, 'input', '', 'Номер телефона')
+                button(type="submit").common-btn-redesign.-yellow.-with-icon Заказать звонок
+                    +icon('arrows-multiple')
+                +form-group-checkbox-allow('cb1', 'Согласие на обработку <a href="#">персональных данных</a>', false, true, 'checkbox-allow', 'label-allow')

@@ -1,0 +1,135 @@
+
+.city-choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  input {
+    border: 1px solid $template-black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .city-choose {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.city-choose__list {
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 66px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .city-choose__list {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.city-choose__list ul {
+  -webkit-column-width: 160px;
+  column-width: 160px;
+  margin-bottom: 64px;
+}
+
+.city-choose__list ul li {
+  margin-bottom: 8px;
+}
+
+.city-choose__list ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #1732bc;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: .4s ease 0s;
+  transition: .4s ease 0s;
+}
+
+.city-choose__list ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  background: #1732bc;
+  width: 100%;
+  opacity: .4;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .4s ease 0s;
+  transition: .4s ease 0s;
+}
+
+.city-choose__list ul li a:hover:after {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.city-choose__list ul {
+  margin-bottom: 20px;
+}
+.city-choose__list {
+  padding: 30px 40px;
+}
+.city-choose__list ul li {
+  margin-bottom: 5px;
+}
+
+.city-choose__info {
+  background: $template-blue;
+  width: 270px;
+  padding: 40px 39px 110px 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  .city-choose__info {
+    width: 100%;
+  }
+}
+
+.city-choose__info-icon {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.city-choose__info-icon .icon {
+  fill: #1732bc;
+  font-size: 45px;
+}
+
+.city-choose__info-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.city-choose__info-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.city-choose__info-text {
+  text-transform: initial;
+}
+.city-choose__info-icon .icon {
+  fill: #ffffff;
+}
+
+.for-sng .h3 {
+  margin-top: 30px;
+}

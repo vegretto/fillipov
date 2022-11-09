@@ -1,0 +1,150 @@
+.showrooms {
+  &__imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 1199px) {
+      width: calc(100% + 24px);
+      margin-left: -12px;
+    }
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__img {
+    height: 246px;
+    @media (max-width: 767px) {
+      height: 148px;
+    }
+
+    img {
+      width: 100%;
+      height: 247px;
+      object-fit: cover;
+      @media (max-width: 767px) {
+        height: 149px;
+      }
+    }
+  }
+
+  &__contacts {
+    background-color: $template-black;
+    padding: 50px 0 25px;
+    @media (max-width: 767px) {
+      padding: 13px 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    margin: -11px;
+    @media (max-width: 1199px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media (max-width: 767px) {
+      margin: -5px 0;
+    }
+  }
+
+  &__item {
+    flex-basis: 425px;
+    max-width: 425px;
+    background-color: $template-dark-blue;
+    padding: 37px 52px 43px;
+    border-radius: 5px;
+    margin: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 767px) {
+      padding: 30px;
+      margin: 5px 0;
+    }
+  }
+
+  &__title-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    min-height: 56px;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 22px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $white;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+    display: block;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &:hover {
+      text-decoration-color: $white;
+    }
+  }
+
+  &__mail {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    color: $template-yellow;
+    text-decoration-color: $template-yellow;
+    text-underline-offset: 4px;
+    margin-bottom: 25px;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 18px;
+      text-decoration-color: $transparent;
+    }
+
+    &:hover {
+      text-decoration-color: $transparent;
+    }
+  }
+
+  &__address {
+    font-size: 14px;
+    line-height: 21px;
+    color: $white;
+    margin-bottom: 13px;
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__working-hours {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $white;
+    padding: 6px 15px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    margin-top: auto;
+  }
+}

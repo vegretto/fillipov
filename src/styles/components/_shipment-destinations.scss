@@ -1,0 +1,72 @@
+.shipment-destinations {
+  background-color: $template-black;
+  padding: 25px 0 53px;
+
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+    @media (max-width: 767px) {
+      align-items: center;
+    }
+  }
+
+  &__countries {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-basis: 435px;
+    margin-right: 10px;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      margin-bottom: 20px;
+      margin-right: 0;
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+
+  &__country {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+
+  &__cities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-basis: 750px;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      grid-template-columns: 1fr 1fr;
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+
+  &__city {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #586B81;
+
+    &:hover {
+      text-decoration-color: #586B81;
+    }
+  }
+
+  .common-btn-redesign {
+    color: #586B81;
+    border-color: #586B81;
+    background-color: $transparent;
+
+    &:hover {
+      color: $white;
+      background-color: #586B81;
+    }
+  }
+}
