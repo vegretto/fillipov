@@ -1,0 +1,27 @@
+//libs
+@import "libs/normalize";
+@import "libs/easy-autocomplete.min";
+@import "libs/swiper-vars";
+@import "libs/swiper";
+
+//helpers
+@import "helpers/mixins";
+
+// base
+@import "base/variables";
+@import "base/fonts";
+@import "base/general";
+@import "base/common";
+
+@import "components/header";
+@import "components/footer";
+@import "components/product-slider-redesign";
+@import "components/product-preview";
+@import "components/rating-stars";
+@import "components/mobile-menu";
+@import "components/catalog-menu";
+@import "components/forms";
+@import "components/top-promo";
+@import "components/modals";
+@import "components/city-choose";
+@import "components/product-card-main";

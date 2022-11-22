@@ -44,6 +44,20 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+function additionalStyles() {
+    return src('src/styles/additional.scss')
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(scss({outputStyle: 'compressed'}))
+        .pipe(autoprefixer({
+            grid: 'autoplace'
+        }))
+        .pipe(concat('additional.min.css'))
+        .pipe(sourcemaps.write('/'))
+        .pipe(dest('src/styles'))
+        .pipe(browserSync.stream())
+}
+
 /*------ JS ---------*/
 
 function scriptsVendor() {
@@ -73,6 +87,28 @@ function scriptsVendor() {
         .pipe(browserSync.stream())
 }
 
+function additionalScriptsVendor() {
+    return src([
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/lazysizes/lazysizes.js',
+        'src/scripts/vendor/jquery.fancybox.js'
+    ])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(concat('additional_vendor.min.js'))
+        .pipe(uglify({
+            output: {
+                comments: false
+            },
+        }))
+        .pipe(sourcemaps.write('/'))
+        .pipe(dest('src/scripts'))
+        .pipe(browserSync.stream())
+}
+
 function scripts() {
     return src('src/scripts/main.js')
         .pipe(plumber())
@@ -81,6 +117,28 @@ function scripts() {
             presets: ['@babel/env']
         }))
         .pipe(concat('main.min.js'))
+        .pipe(uglify({
+            output: {
+                comments: false
+            },
+        }))
+        .pipe(sourcemaps.write('/'))
+        .pipe(dest('src/scripts'))
+        .pipe(browserSync.stream())
+}
+
+function additionalScripts() {
+    return src([
+        'src/scripts/vendor/jquery.visible.min.js',
+        'node_modules/swiper/swiper-bundle.min.js',
+        'src/scripts/additional.js'
+    ])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(concat('additional.min.js'))
         .pipe(uglify({
             output: {
                 comments: false
@@ -162,8 +220,8 @@ function cleanSprite() {
 
 function watcher() {
     watch(['src/views/**/*.pug'], views);
-    watch(['src/styles/**/*.scss'], styles);
-    watch(['src/scripts/main.js'], scripts);
+    watch(['src/styles/**/*.scss'], parallel(styles, additionalStyles));
+    watch(['src/scripts/main.js', 'src/scripts/additional.js'], parallel(scripts, additionalScripts));
     watch(['src/img/*.{png,jpg,jpeg}'], devToWebp);
     watch(['src/img/svg/*.svg', '!src/img/svg/sprite.svg'], series(cleanSprite, devSprite));
 }
@@ -190,10 +248,16 @@ function copytodist () {
         'src/**/*.html',
         'src/styles/style.min.css',
         'src/styles/style.min.css.map',
+        'src/styles/additional.min.css',
+        'src/styles/additional.min.css.map',
         'src/scripts/vendor.min.js',
         'src/scripts/vendor.min.js.map',
         'src/scripts/main.min.js',
         'src/scripts/main.min.js.map',
+        'src/scripts/additional_vendor.min.js',
+        'src/scripts/additional_vendor.min.js.map',
+        'src/scripts/additional.min.js',
+        'src/scripts/additional.min.js.map',
         'src/fonts/**/*',
         'src/img/svg/**/*.svg',
         'src/img/*.ico',
@@ -204,6 +268,6 @@ function copytodist () {
         .pipe(dest('dist'))
 }
 
-exports.dev = series(parallel(views, styles, scriptsVendor, scripts), parallel(browsersync, watcher))
-exports.build = series(cleandist, parallel(views, styles, scriptsVendor, scripts), images, toWebp, sprite, copytodist)
-exports.buildnoimg = series(cleandisteximg, parallel(views, styles, scriptsVendor, scripts), sprite, copytodist)
+exports.dev = series(parallel(views, additionalStyles, styles, scriptsVendor, scripts, additionalScripts, additionalScriptsVendor), parallel(browsersync, watcher))
+exports.build = series(cleandist, parallel(views, additionalStyles, styles, scriptsVendor, scripts,  additionalScripts, additionalScriptsVendor), images, toWebp, sprite, copytodist)
+exports.buildnoimg = series(cleandisteximg, parallel(views, additionalStyles, styles, scriptsVendor, scripts,  additionalScripts, additionalScriptsVendor), sprite, copytodist)
