@@ -10,26 +10,28 @@ block content
                 ._inner
                     ._gallery
                         a(href="#product-video-presentation")._video-link.js-scroll-to Видео
+                            .play-btn
+                                +icon('play-btn')
                         ._gallery-box
                             ._thumb-slider-qty
                                 span Фото: 5
                             ._thumb-slider-box
                                 ._thumbs-slider.js-product-thumbs-slider
                                     ._thumbs-slider-wrapper.swiper-wrapper
-                                        //._thumb-slide.-video.swiper-slide
-                                        //    +picture('thumbs-slide-1', 'png', 114, 102)
-                                        //    .play-btn
-                                        //        +icon('play-btn')
+                                        ._thumb-slide.-video.swiper-slide
+                                            +picture('thumbs-slide-1', 'png', 114, 102)
+                                            .play-btn
+                                                +icon('play-btn')
                                         ._thumb-slide.swiper-slide
                                             +picture('thumbs-slide-2', 'png', 114, 102)
-                                        //._thumb-slide.-video.swiper-slide
-                                        //    +picture('thumbs-slide-3', 'png', 114, 102)
-                                        //    .play-btn
-                                        //        +icon('play-btn')
-                                        //._thumb-slide.-video.swiper-slide
-                                        //    +picture('thumbs-slide-3', 'png', 114, 102)
-                                        //    .play-btn
-                                        //        +icon('play-btn')
+                                        ._thumb-slide.-video.swiper-slide
+                                            +picture('thumbs-slide-3', 'png', 114, 102)
+                                            .play-btn
+                                                +icon('play-btn')
+                                        ._thumb-slide.-video.swiper-slide
+                                            +picture('thumbs-slide-3', 'png', 114, 102)
+                                            .play-btn
+                                                +icon('play-btn')
                                         ._thumb-slide.swiper-slide
                                             +picture('thumbs-slide-1', 'png', 114, 102)
                                         ._thumb-slide.swiper-slide
@@ -48,15 +50,15 @@ block content
                                     +icon('slider-arrow')
                         ._main-slider.js-product-main-slider
                             ._main-slider-wrapper.swiper-wrapper
-                                //._main-slide.swiper-slide
-                                //    a(href='video/first-video.mp4' data-fancybox='product-slider-1')
-                                //        video.product-first-video(src='video/first-video.mp4' autoplay muted loop playsinline)
+                                ._main-slide.swiper-slide
+                                    a(href='video/first-video.mp4' data-fancybox='product-slider-1')
+                                        video.product-first-video(src='video/first-video.mp4' autoplay muted loop playsinline)
                                 ._main-slide.swiper-slide
                                     +pictureFancybox('main-slide-1', 'png', 586, 551, 'product-slider-1')
-                                //._main-slide.swiper-slide
-                                //    +videoFancyboxYT('https://youtu.be/xUwe_uN9l5o', 'https://img.youtube.com/vi/xUwe_uN9l5o/0.jpg', 586, 551, 'product-slider-1', true)
-                                //._main-slide.swiper-slide
-                                //    +videoFancyboxYT('https://youtu.be/xUwe_uN9l5o', 'https://img.youtube.com/vi/xUwe_uN9l5o/0.jpg', 586, 551, 'product-slider-1', true)
+                                ._main-slide.swiper-slide
+                                    +videoFancyboxYT('https://youtu.be/xUwe_uN9l5o', 'https://img.youtube.com/vi/xUwe_uN9l5o/0.jpg', 586, 551, 'product-slider-1', true)
+                                ._main-slide.swiper-slide
+                                    +videoFancyboxYT('https://youtu.be/xUwe_uN9l5o', 'https://img.youtube.com/vi/xUwe_uN9l5o/0.jpg', 586, 551, 'product-slider-1', true)
                                 ._main-slide.swiper-slide
                                     +pictureFancybox('main-slide-1', 'png', 586, 551, 'product-slider-1')
                                 ._main-slide.swiper-slide

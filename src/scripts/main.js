@@ -73,16 +73,29 @@ $(document).ready(function () {
                 $('body').css('padding-top', 0);
             }
         }
-
+        let shareIsVisible = false;
         const checkVisible = () => {
             $('.ya-share2').each(function () {
-                let shareIsVisible = false;
+                console.log(shareIsVisible);
                 if(!shareIsVisible && $(this).visible())  {
                     shareIsVisible = true;
                     loadScript('https://yastatic.net/share2/share.js', ()=>{})
                 }
             })
         }
+
+        $('.js-test').on('click', function () {
+            let html = `<div id="modal-quick-view">
+<div class="modal-body"></div>
+</div>`
+
+
+            console.log(123);
+            $('body').append(html)
+        })
+        $(window).on('quickView', function () {
+            console.log(222);
+        })
 
         const checkMobileCategories = () => {
             if ($(window).scrollTop() > mobileCategoriesMenuY) {
@@ -252,7 +265,7 @@ $(document).ready(function () {
             watchSlidesProgress: true,
             observer: true,
             observeParents: true,
-
+            loop: true,
             navigation: {
                 nextEl: '.product-card-main__arrow--next',
                 prevEl: '.product-card-main__arrow--prev',
@@ -270,6 +283,7 @@ $(document).ready(function () {
 
         const productMainSlider = new Swiper(mainEl, {
             slidesPerView: 1,
+            loop: true,
             thumbs: {
                 swiper: productThumbsSlider,
             }

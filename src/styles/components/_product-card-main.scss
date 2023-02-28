@@ -44,6 +44,15 @@
     color: $template-orange;
     right: 0;
     z-index: 9;
+    display: flex;
+    align-items: center;
+
+    .play-btn {
+      margin-left: 10px;
+      fill: $template-orange;
+      position: relative;
+      bottom: 1px;
+    }
     @media (max-width: 991px) {
       right: 20px;
     }

@@ -24,6 +24,11 @@
       pointer-events: initial;
       transition: .3s ease-in-out;
     }
+
+    .product-preview__img--hidden {
+      opacity: 1;
+      pointer-events: initial;
+    }
   }
 
   &--accessory {
@@ -175,6 +180,14 @@
       @media (max-width: 767px) {
         height: auto;
       }
+    }
+
+    &--hidden {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     .play-btn {

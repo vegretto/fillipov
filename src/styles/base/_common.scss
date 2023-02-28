@@ -335,3 +335,31 @@
 .additional-page {
   padding: 60px 0;
 }
+
+.swipe-scroll-wrapper {
+  position: relative;
+  padding-bottom: 30px;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    bottom: 0;
+    left: 0;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxLjUgOUwxMi43NSAwLjI1TDExIDJMMTUuNTkzOCA2LjU5Mzc1TDE3LjEyNSA3LjkwNjI1TDEzLjYyNSA3LjY4NzVIMC41VjEwLjMxMjVIMTMuNjI1TDE3LjEyNSAxMC4wOTM4TDE1LjU5MzggMTEuNDA2MkwxMSAxNkwxMi43NSAxNy43NUwyMS41IDlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scale(-1);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    bottom: 0;
+    right: 0;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxLjUgOUwxMi43NSAwLjI1TDExIDJMMTUuNTkzOCA2LjU5Mzc1TDE3LjEyNSA3LjkwNjI1TDEzLjYyNSA3LjY4NzVIMC41VjEwLjMxMjVIMTMuNjI1TDE3LjEyNSAxMC4wOTM4TDE1LjU5MzggMTEuNDA2MkwxMSAxNkwxMi43NSAxNy43NUwyMS41IDlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
